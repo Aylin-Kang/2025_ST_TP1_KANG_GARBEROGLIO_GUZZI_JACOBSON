@@ -37,13 +37,13 @@ char stringtemp[10];
 char stringumbral[10];
 
 void setup() {
-Serial.begin(115200);
+  Serial.begin(115200);
   pinMode(SW1, INPUT);
   pinMode(SW2, INPUT);
   pinMode(LED, OUTPUT);
- u8g2.begin();
-dht.begin();
-}
+  u8g2.begin();
+  dht.begin();
+  }
 
 
 
@@ -120,8 +120,7 @@ void loop() {
 
 
 void getTemp() {
-    //TA = dht.readTemperature();
-    TA = 25;
+    TA = dht.readTemperature();
 }
 void printTemp1(void)
 { 
